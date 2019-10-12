@@ -1,0 +1,35 @@
+import java.awt.Graphics;
+
+public class health {
+
+	private int x,y;
+	private motor motor;
+	
+	public health(motor m, int x, int y)
+	{
+		motor = m;
+		this.x = x;
+		this.y = y;
+		
+	}
+	public void tick()
+	{
+		y += 1;
+	}
+	public void render(Graphics graphics)
+	{
+		graphics.drawImage(loadImage.health, x, y-motor.getOffset(), 20,25,null);
+		
+	}
+	
+	public int getX()
+	{
+		return x;
+	}
+	public int getY()
+	{
+		return y;
+	}
+
+	
+}
